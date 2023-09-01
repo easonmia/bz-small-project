@@ -1,0 +1,63 @@
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display:flex ;
+      /*
+        以游戏的方式学习flex布局：[Flexbox Froggy - A game for learning CSS flexbox](https://flexboxfroggy.com/)
+    */
+    justify-content: center;
+    align-items: center;
+}
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+.banner .content{
+    position: relative;
+    z-index: 1;
+
+    /* 设置最大宽度，防止子元素<p>的文本内容将.content撑开 */
+    max-width: 1000px;
+
+    /* 
+        使.content在.banner当中垂直居中 
+            * margin: 上下 左右；
+        使子元素文本居中对齐
+            * text-align: center；
+    */
+    margin: 0 auto;
+    text-align: center;
+}
+.banner .content h1{
+    /* 将<h1>的默认margin和padding清零 */
+    margin: 0;
+    padding: 0;
+
+    font-size: 4.5em;
+
+    /* 英文字母全部大写 */
+    text-transform: uppercase;
+
+    color: white;
+}
+
+.banner .content p{
+    font-size: 1.5em;
+    color: white;
+    /* 文本两端对齐视觉效果更佳 */
+    text-align: justify;
+}
