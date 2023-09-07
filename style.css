@@ -5,3 +5,38 @@
     align-items: center;
     background-color: pink;
 }
+
+input#open{
+    display: none;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 0.3s;
+    /* ??? */
+}
+
+.card-front{
+    position: relative;
+    background-color: #fff0f3;
+    width: 300px;
+    height: 300px;
+    transform-origin:left ;
+}
+
+.card-front::before{
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background-color: #f38e8e;
+    top: 10px;
+    left: 10px;
+}
+
+.card-inside{
+    
+}
