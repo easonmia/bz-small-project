@@ -38,5 +38,40 @@ input#open{
 }
 
 .card-inside{
-    
+    position: absolute;
+    background-color: #fff0f3;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-color: #f5f5f5;
+
+}
+
+.open{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 6;
+    cursor: pointer;
+    }
+
+#open:checked~.card-front{
+    transform: rotateY(-145deg);
+}
+
+#open:checked~.card-front::before{
+    z-index: 5;
+    background-color: #fff0f3;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    background-image: url(/image/love.gif);
+    background-size: cover;
+    transform: rotateY(155deg) translate(16px);
 }
