@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.js">
+</head>
+<script>
+    window.onload = function(){
+        const open = document.getElementById('open')
+        const close = document.getElementById('close')
+        const container = document.querySelector('.container')
+        open.addEventListener('click',()=>container.classList.add('show-nav'))
+        close.addEventListener('click',()=>container.classList.remove('show-nav'))
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close">
+                    <i class="iconfont">&#xe685;</i>
+                </button>
+                <button id="open">
+                    <i class="iconfont">&#xe66e;</i>
+                </button>
+            </div>
+        </div>
+
+    <div class="content">
+        <h1>CAT</h1>
+        <small>miao</small>
+        <p>XXX</p>
+        <h3>CAT</h3>
+        <img src="logo_副本.jpg" alt="#">
+        <p>miaomiao</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#"><i class="iconfont">&#xe62b;</i></a></li>
+            <li><a href="#"><i class="iconfont">&#xeb21;</i></a></li>
+            <li><a href="#"><i class="iconfont">&#xe61d;</i></a></li>
+        </ul>
+    </nav>
+</body>
+</html>
