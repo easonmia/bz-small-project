@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurry Loading</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.js">
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Ubuntu',sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin:0;
+        
+    }
+    .bg{
+        background: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fm00%2Fe7%2Ff5%2F4be82635b9cf81ffdc1dd0e0f0204b51.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1652318250&t=8eece1b332b7eb544ff58b3cffb00c63') no-repeat center center/cover;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: calc(100vw + 60px);
+        height: calc(100vh + 60px);
+        z-index: -1;
+        filter: blur(0px);
+    }
+    .loading-text{
+        font-size: 50px;
+        color: #fff;
+    }
+</style>
+<script>
+    window.onload = function(){
+        const loadText = document.querySelector('.loading-text')
+        const bg = document.querySelector('.bg')
+        let load = 0
+        let timer = setInterval(blurring,30)
+        function blurring (){
+            load++
+            if(load > 99)
+                clearInterval(timer)
+            loadText.innerText = `${load}%`
+            loadText.style.opacity = scale(load,1)
+            bg.style.filter =  `blur(${scale(load,30)}px)`
+        }
+        const scale = (num,min)=>(100-num)/100*min
+    
+    }
+</script>
+<body>
+   <section class="bg"></section>
+   <div class="loading-text"></div>
+</body>
+</html>
