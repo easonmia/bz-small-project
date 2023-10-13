@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: #dca2f4; */
+    background-image: linear-gradient(lightpink,#504545);
+    color: #fff;
+    font-family: 'Roboto Mono',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.counter{
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+@media(max-width:580px){
+    body{
+      flex-direction: column;
+    }
+}
+
+/* 
+
+#grad {
+  background-image: linear-gradient(red, yellow, blue);
+}
+/* 从上到下，蓝色渐变到红色 */
+/* linear-gradient(blue, red); */
+
+/* 渐变轴为45度，从蓝色渐变到红色 */
+/* linear-gradient(45deg, blue, red); */
+ 
+/* 从右下到左上、从蓝色渐变到红色 */
+/* linear-gradient(to left top, blue, red); */
+ 
+/* 从下到上，从蓝色开始渐变、到高度40%位置是绿色渐变开始、最后以红色结束 */
+/* linear-gradient(0deg, blue, green 40%, red); */
+
+
+
+
+
+/* @media 可以针对不同的屏幕尺寸设置不同的样式，特别是如果你需要设置设计响应式的页面，@media 是非常有用的。 */
+
+/* 当你重置浏览器大小的过程中，页面也会根据浏览器的宽度和高度重新渲染页面。 */
+/* max-width	定义输出设备中的页面最大可见区域宽度。 */ 
+
