@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑动名片</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- 名片分三大块
+    最外层的一块a
+    文字一大块b
+    平面圆柱一块c -->
+    <div class="a">
+        <div class="b">
+            <a href="#">Miamia赛</a>
+            <h2>可爱🐱</h2>
+            <span>喵</br>喵<br/>喵<br/>喵</span>
+        </div>
+        <div class="c">
+            <!-- --i是用来计算平面圆柱的动效延迟和距离的
+            --w则是用来计算平面圆柱的宽度 -->
+            <div class="d" style="--i:1;--w:1.5"></div>
+            <div class="d" style="--i:2;--w:1.6"></div>
+            <div class="d" style="--i:3;--w:1.4"></div>
+            <div class="d" style="--i:4;--w:1.7"></div>
+            <div class="e" style="--i:1"></div>
+        </div>
+        <!-- 设置二维码 -->
+        <div class="f"></div>
+    </div>
+</body>
+</html>
